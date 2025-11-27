@@ -1,0 +1,131 @@
+[18:29:15][PluginLoader][INFO] No plugins found.
+[18:29:15][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/restful-api-server-config/-/raw/main/test-config-6.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[18:29:15][NATTCore][INFO] Working directory path: C:\Users\minks\Documents\UTB\ZS\AP5VS\ukol6\restful-api-server-main
+[18:29:15][NATTCore][INFO] Start loading of the configuration file ...
+[18:29:15][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/restful-api-server-config/-/raw/main/test-config-6.yaml?ref_type=heads)
+[18:29:15][NATTCore][INFO] Configuration loading done
+[18:29:15][NATTCore][INFO] Start building test structure according to the configuration ...
+[18:29:16][NATTCore][INFO] Test structure ...
+[18:29:16][NATTCore][INFO] Test structure building done
+[18:29:16][NATTCore][INFO] Start test executing ...
+[18:29:16][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[18:29:16][NATTCore][INFO] Starts execution on the root keyword  ...
+[18:29:16][MessageBuffer][INFO] Message buffer created for module with name: default
+[18:29:16][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar build/libs/RESTAPIServer-0.0.1-SNAPSHOT.jar
+[18:29:16][ProcessManager][INFO] New PID (21268) added to file
+[18:29:16][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 30000 ms
+[18:29:16][ProcessManager][INFO] PID (21268) removed from file
+[18:29:16][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[18:29:16][ExternalProgramRunner][WARNING] (default) Error message from external application: Error: Unable to access jarfile build/libs/RESTAPIServer-0.0.1-SNAPSHOT.jar
+
+[18:29:46][WaitUntilKw][WARNING] Timeout.. Action was not invoked!
+[18:29:46][MessageBuffer][INFO] Message buffer created for module with name: module-1
+[18:29:46][RESTTester][INFO] (module-1) Sending a DELETE request on endpoint: http://localhost:8080/deleteAll
+[18:29:46][RESTTester][WARNING] (module-1) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:46][MessageBuffer][INFO] Message buffer created for module with name: user-create
+[18:29:46][MessageBuffer][INFO] Message buffer created for module with name: user-get
+[18:29:46][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele' starts executing now
+[18:29:46][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[18:29:46][RESTTester][WARNING] (user-create) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:46][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[18:29:46][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[18:29:46][RESTTester][WARNING] (user-get) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:46][AssertJsonKw][WARNING] Assertion failed. Variable 'user-get-last-msg' not found!
+[18:29:46][TestSuiteKw][ERROR] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele' failed
+[18:29:46][MessageBuffer][INFO] Message buffer cleared
+[18:29:47][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele s neplatným emailem' starts executing now
+[18:29:47][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[18:29:47][RESTTester][WARNING] (user-create) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:47][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-create-last-msg' not found!
+[18:29:47][TestSuiteKw][ERROR] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele s neplatným emailem' failed
+[18:29:47][MessageBuffer][INFO] Message buffer cleared
+[18:29:47][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele s neplatným telefonem' starts executing now
+[18:29:47][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[18:29:47][RESTTester][WARNING] (user-create) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:47][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-create-last-msg' not found!
+[18:29:47][TestSuiteKw][ERROR] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele s neplatným telefonem' failed
+[18:29:47][MessageBuffer][INFO] Message buffer cleared
+[18:29:48][MessageBuffer][INFO] Message buffer cleared
+[18:29:48][RESTTester][INFO] (user-create) REST tester [user-create] terminated
+[18:29:48][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[18:29:48][MessageBuffer][INFO] Message buffer created for module with name: user-edit
+[18:29:48][MessageBuffer][INFO] Message buffer created for module with name: user-all
+[18:29:48][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele' starts executing now
+[18:29:48][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[18:29:48][RESTTester][WARNING] (user-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:48][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[18:29:48][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[18:29:48][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[18:29:48][RESTTester][WARNING] (user-edit) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:48][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[18:29:48][RESTTester][WARNING] (user-get) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:48][AssertJsonKw][WARNING] Assertion failed. Variable 'user-get-last-msg' not found!
+[18:29:48][TestSuiteKw][ERROR] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele' failed
+[18:29:48][MessageBuffer][INFO] Message buffer cleared
+[18:29:49][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele s neplatnými údaji 1' starts executing now
+[18:29:49][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[18:29:49][RESTTester][WARNING] (user-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:49][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[18:29:49][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[18:29:49][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[18:29:49][RESTTester][WARNING] (user-edit) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:49][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-edit-last-msg' not found!
+[18:29:49][TestSuiteKw][ERROR] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele s neplatnými údaji 1' failed
+[18:29:49][MessageBuffer][INFO] Message buffer cleared
+[18:29:49][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele s neplatnými údaji 2' starts executing now
+[18:29:49][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[18:29:49][RESTTester][WARNING] (user-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:49][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[18:29:49][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[18:29:49][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[18:29:49][RESTTester][WARNING] (user-edit) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:49][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-edit-last-msg' not found!
+[18:29:49][TestSuiteKw][ERROR] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele s neplatnými údaji 2' failed
+[18:29:50][MessageBuffer][INFO] Message buffer cleared
+[18:29:50][MessageBuffer][INFO] Message buffer cleared
+[18:29:50][RESTTester][INFO] (user-edit) REST tester [user-edit] terminated
+[18:29:50][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[18:29:50][RESTTester][INFO] (user-all) REST tester [user-all] terminated
+[18:29:50][MessageBuffer][INFO] Message buffer created for module with name: user-delete
+[18:29:50][MessageBuffer][INFO] Message buffer created for module with name: user-delete-all
+[18:29:50][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[18:29:50][RESTTester][WARNING] (user-create) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:50][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[18:29:50][RESTTester][WARNING] (user-create) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:50][TestSuiteKw][INFO] Test case 'Test odstranění jednoho uživatele' starts executing now
+[18:29:50][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[18:29:50][RESTTester][WARNING] (user-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:50][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[18:29:50][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[18:29:50][RESTTester][INFO] (user-delete) Sending a DELETE request on endpoint: http://localhost:8080/deleteUser
+[18:29:50][RESTTester][WARNING] (user-delete) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:50][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[18:29:50][RESTTester][WARNING] (user-get) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:50][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-get-last-msg' not found!
+[18:29:50][TestSuiteKw][ERROR] Test suite 'Testování požadavků pro odstranění' - Test case 'Test odstranění jednoho uživatele' failed
+[18:29:50][MessageBuffer][INFO] Message buffer cleared
+[18:29:51][TestSuiteKw][INFO] Test case 'Test odstranění všech uživatelů' starts executing now
+[18:29:51][RESTTester][INFO] (user-delete-all) Sending a DELETE request on endpoint: http://localhost:8080/deleteAll
+[18:29:51][RESTTester][WARNING] (user-delete-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:51][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[18:29:51][RESTTester][WARNING] (user-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+[18:29:51][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-all-last-msg' not found!
+[18:29:51][TestSuiteKw][ERROR] Test suite 'Testování požadavků pro odstranění' - Test case 'Test odstranění všech uživatelů' failed
+[18:29:51][MessageBuffer][INFO] Message buffer cleared
+[18:29:52][MessageBuffer][INFO] Message buffer cleared
+[18:29:52][RESTTester][INFO] (user-delete) REST tester [user-delete] terminated
+[18:29:52][RESTTester][INFO] (user-delete-all) REST tester [user-delete-all] terminated
+[18:29:52][RESTTester][INFO] (user-all) REST tester [user-all] terminated
+[18:29:52][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[18:29:52][RESTTester][INFO] (user-create) REST tester [user-create] terminated
+[18:29:52][MessageBuffer][INFO] Message buffer cleared
+[18:29:52][RESTTester][INFO] (module-1) REST tester [module-1] terminated
+[18:29:52][NATTCore][INFO] Test executing finished
+[18:29:52][NATTCore][INFO] Start generating test report
+[18:29:52][TestReportGenerator][INFO] Report saved to file
+[18:29:52][NATTCore][WARNING] Failed test cases: "Test root initialization", "Test suite 'Testování požadavků pro odstranění' initialization", "Test vytvoření uživatele", "Test vytvoření uživatele s neplatným emailem", "Test vytvoření uživatele s neplatným telefonem", "Test aktualizace uživatele", "Test aktualizace uživatele s neplatnými údaji 1", "Test aktualizace uživatele s neplatnými údaji 2", "Test odstranění jednoho uživatele", "Test odstranění všech uživatelů"
+[18:29:52][NATTCore][INFO] Final score: 0.000000
+[18:29:52][NATTCore][ERROR] Testing done. Leaving status: FAILED
